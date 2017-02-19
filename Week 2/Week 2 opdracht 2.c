@@ -17,7 +17,6 @@ int main(int argc, char **argv)
     
     printf("Enter the first string: ");
     fgets(string1, size, stdin);
-    printf("appels %d", string1[81]);
     if ((string1[80] != 10) && (string1[80] != 0)){
         printf("Warning! The string you gave is longer than 80 characters. Cutting off string!");
         string1[80] = 10;
