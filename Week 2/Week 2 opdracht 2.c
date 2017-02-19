@@ -18,20 +18,20 @@ int main(int argc, char **argv)
     printf("Enter the first string: ");
     fgets(string1, size, stdin);
     if ((string1[80] != 10) && (string1[80] != 0)){
-        printf("Warning! The string you gave is longer than 80 characters. Cutting off string!");
+        printf("Warning! The string you gave is longer than 80 characters! Cutting off string!\n");
         string1[80] = 10;
         while (getchar() != '\n');
     }
     printf("Enter the second string: ");
     fgets(string2, size, stdin);
     if ((string2[80] != 10) && (string2[80] != 0)){
-        printf("Warning! The string you gave is longer than 80 characters! Cutting off string!");
+        printf("Warning! The string you gave is longer than 80 characters! Cutting off string!\n");
         string2[80] = 10;
         while (getchar() != 10);
     }
     while ((string1[index] == string2[index]) && (index < size)){
         index++;
-        if (index >= size) printf("Those strings are exactly the same.");
+        if (index >= size) printf("Those strings are exactly the same.\n");
     }
     if (index < size){
         printf("Those two strings start to differ at character number %d.\n", (index + 1));
