@@ -15,9 +15,9 @@ int main(int argc, char **argv){
     
     printf("Enter text to display backwards.\n");
     fgets(input, size, stdin);
-    if ((input[80] != 10) && (input[80] != 0)){
-        printf("Warning! The string you gave is longer than 80 characters! Cutting off string!\n");
-        input[80] = 10;
+    if ((input[size - 2] != 10) && (input[size - 2] != 0)){
+        printf("Warning! The string you entered is more than 80 characters long! Cutting off string!\n");
+        input[size - 2] = 10;
         while (getchar() != '\n');
     }
     for (int i = (strlen(input) - 1); i >= 0; i--){
