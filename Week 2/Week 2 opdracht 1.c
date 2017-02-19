@@ -22,7 +22,7 @@ int main(int argc, char **argv){
             printf("Enter another 0 or 1.\n");
         }
     }
-    for (int i = 0; i < (sizeof(a) / sizeof(int)); i++){
+    for (int i = 0; i < (sizeof(a) / sizeof(a[0])); i++){
         if (a[i] == 0) count0++;
         else if (a[i] == 1) count1++;
     }
